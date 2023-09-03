@@ -1,6 +1,6 @@
 # local 定義
 locals {
-    github_repository           = "myuser/myrepository"
+    github_repository           = "Taku03221118/github-actions"
     project_id                  = "github-test-397804"
     region                      = "asia-northeast1"
     terraform_service_account   = "tf-exec@github-test-397804.iam.gserviceaccount.com"
@@ -61,7 +61,7 @@ resource "google_iam_workload_identity_pool_provider" "myprovider" {
     }
     
     oidc {
-        issuer_uri = "https://token.actions.githubusercontent.com"
+        issuer_uri = "https://token.actions.githubusercontent.com" #Githubと連携するならこの値みたい。
     }
 }
   
